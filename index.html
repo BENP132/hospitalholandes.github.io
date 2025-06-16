@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital HOLANDÉS</title>
+
+  <!-- Estilos CSS personalizados -->
+  <link rel="stylesheet" href="STYLES/estiilo.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #003366;">
+  
+  <!-- CABECERA: Contenedor de la navegación principal y el slider -->
+  <header style="margin: 0; padding: 0; width: 100%; top: 0; left: 0; z-index: 1030; box-shadow: 0 2px 5px rgba(211, 199, 199, 0.1); background-color: #ffffff;">
+  
+    <div style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    background-color: #f8f9fa;
+    border-bottom: 3px solid #0074b7;
+    flex-wrap: wrap;
+  ">
+
+    <!-- LOGO -->
+    <div style="flex: 1;">
+      <a href="index11.html">
+        <img src="imagenes/logolgo.jfif" alt="Logo Hospital" style="height: 60px; width: 60px;">
+      </a>
+    </div>
+
+    <style>
+      /* Reset y base */
+      nav {
+        background-color: #fff;
+        border-bottom: 2px solid #0074b7;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+    
+      nav li {
+        position: relative;
+      }
+    
+      nav > ul > li {
+        margin: 0 15px;
+      }
+    
+      nav a {
+        display: block;
+        padding: 12px 15px;
+        color: #003366;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+      }
+    
+      nav a:hover {
+        background-color: #e6f0fa;
+        color: #0056b3;
+      }
+    
+      /* Dropdown mega menú */
+      nav li:hover > .dropdown {
+        display: flex;
+      }
+    
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 600px;
+        background: #fff;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        border-radius: 6px;
+        display: none;
+        padding: 20px;
+        gap: 20px;
+        z-index: 1000;
+      }
+    
+      .dropdown .dropdown-links {
+        flex: 1;
+      }
+    
+      .dropdown .dropdown-links ul {
+        list-style: none;
+        padding: 0;
+      }
+    
+      .dropdown .dropdown-links ul li {
+        margin-bottom: 10px;
+      }
+    
+      .dropdown .dropdown-links ul li a {
+        font-weight: 600;
+        color: #003366;
+      }
+    
+      .dropdown .dropdown-links ul li a:hover {
+        color: #0074b7;
+      }
+    
+      .dropdown .dropdown-image {
+        flex: 1;
+      }
+    
+      .dropdown .dropdown-image img {
+        max-width: 100%;
+        border-radius: 6px;
+      }
+    
+      /* Responsive básico */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        nav > ul > li {
+          margin: 10px 0;
+        }
+        .dropdown {
+          position: static;
+          width: 100%;
+          flex-direction: column;
+          padding: 10px;
+        }
+        .dropdown .dropdown-image {
+          margin-top: 15px;
+        }
+      }
+    </style>
+    
+    <nav>
+      <ul>
+        <li><a href="index11.html">Inicio</a></li>
+    
+        <li>
+          <a href="citas.html">Citas</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="citas.html">Citas Presenciales</a></li>
+                <li><a href="citas.html">Citas Virtuales</a></li>
+                <li><a href="citas.html">Agenda Médicos</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/citasmedicas.jfif" alt="Citas Médicas">
+            </div>
+          </div>
+        </li>
+    
+        <li>
+          <a href="servicios.html">Servicios</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="servicios.html">Servicios Generales</a></li>
+                <li><a href="servicios.html">Laboratorio</a></li>
+                <li><a href="servicios.html">Radiología</a></li>
+                <li><a href="servicios.html">Farmacia</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/servicios.jfif" alt="Servicios Médicos">
+            </div>
+          </div>
+        </li>
+    
+        <li>
+          <a href="medicos.html">Médicos</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="medicos.html">Especialistas</a></li>
+                <li><a href="medicos.html">Equipo Médico</a></li>
+                <li><a href="medicos.html">Currículums</a></li>
+                <li><a href="medicos.html">Horarios</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/medicoss.jfif" alt="Médicos del Hospital">
+            </div>
+          </div>
+        </li>
+        
+        <li>
+          <a href="emergencias.html">Urgencias 24/7</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="emergencias.html">Emergencias Médicas</a></li>
+                <li><a href="emergencias.html">Ambulancia</a></li>
+                <li><a href="emergencias.html">Contacto Rápido</a></li>
+                <li><a href="emergencias.html">Protocolo de Atención</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/urgencias.jpg" alt="Urgencias 24 Horas">
+            </div>
+          </div>
+        </li>
+        
+        <li>
+          <a href="informacion.html">Información</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="informacion.html">Preguntas Frecuentes</a></li>
+                <li><a href="informacion.html">Políticas del Centro</a></li>
+                <li><a href="informacion.html">Documentos</a></li>
+                <li><a href="informacion.html">Seguros de Salud</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/informacion.jfif" alt="Información General">
+            </div>
+          </div>
+        </li>
+        
+        <li class="dropdown-left">
+          <a href="contacto.html">Contacto</a>
+          <div class="dropdown">
+            <div class="dropdown-links">
+              <ul>
+                <li><a href="contacto.html">Ubicación</a></li>
+                <li><a href="contacto.html">Correo y Teléfono</a></li>
+                <li><a href="contacto.html">Redes Sociales</a></li>
+                <li><a href="contacto.html">Formulario Web</a></li>
+              </ul>
+            </div>
+            <div class="dropdown-image">
+              <img src="imagenes/contactos.jfif" alt="Contáctanos">
+            </div>
+          </div>
+        </li>
+        
+        
+      </ul>
+    </nav>
+    
+    
+<!-- BUSCADOR + PORTAL PACIENTES -->
+<div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 15px;">
+
+  <!-- BUSCADOR -->
+  <form id="buscadorForm" style="position: relative; margin: 0;" onsubmit="return false;">
+    <input type="text" id="busqueda" autocomplete="off" placeholder="Buscar servicios del hospital..." style="
+      padding: 5px 30px 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      width: 250px;
+    ">
+    <span id="lupa" style="
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #003366;
+      font-size: 16px;
+      cursor: pointer;
+      user-select: none;
+    ">&#128269;</span>
+
+    <ul id="listaServicios" style="
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      max-height: 150px;
+      overflow-y: auto;
+      padding-left: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: none;
+      list-style: none;
+      margin: 0;
+      z-index: 1000;
+    ">
+      <li>Cardiología</li>
+      <li>Neurología</li>
+      <li>Pediatría</li>
+      <li>Radiología</li>
+      <li>Laboratorio</li>
+      <li>Farmacia</li>
+      <li>Urgencias 24/7</li>
+      <li>Servicios Generales</li>
+      <li>Consultas Virtuales</li>
+    </ul>
+  </form>
+
+  <!-- PORTAL PACIENTES -->
+  <a href="portal.html" style="
+    background-color: #0074b7;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#005c94'" onmouseout="this.style.backgroundColor='#0074b7'">
+    Portal de Pacientes
+  </a>
+</div>
+
+<script>
+  const input = document.getElementById('busqueda');
+  const lista = document.getElementById('listaServicios');
+  const lupa = document.getElementById('lupa');
+
+  // Mostrar lista filtrada mientras escribes
+  input.addEventListener('input', () => {
+    const texto = input.value.toLowerCase().trim();
+    const items = lista.querySelectorAll('li');
+    let anyVisible = false;
+
+    items.forEach(item => {
+      if(item.textContent.toLowerCase().includes(texto) && texto !== '') {
+        item.style.display = 'block';
+        anyVisible = true;
+      } else {
+        item.style.display = 'none';
+      }
+    });
+
+    lista.style.display = anyVisible ? 'block' : 'none';
+  });
+
+  // Al hacer click en un ítem de la lista, asignar texto al input y ocultar lista
+  lista.addEventListener('click', (e) => {
+    if(e.target.tagName === 'LI') {
+      input.value = e.target.textContent;
+      lista.style.display = 'none';
+    }
+  });
+
+  // Al hacer click en la lupa, buscar en Google en nueva pestaña
+  lupa.addEventListener('click', () => {
+    const busqueda = input.value.trim();
+    if(busqueda === '') {
+      alert('Por favor escribe un término para buscar.');
+      return;
+    }
+    // Abrir búsqueda en Google en una nueva pestaña
+    window.open('https://www.google.com/search?q=' + encodeURIComponent(busqueda), '_blank');
+  });
+
+  // Cerrar la lista al hacer click fuera del input o lista
+  document.addEventListener('click', (e) => {
+    if (!input.contains(e.target) && !lista.contains(e.target) && e.target !== lupa) {
+      lista.style.display = 'none';
+    }
+  });
+
+  // Opcional: buscar con Enter
+  input.addEventListener('keydown', e => {
+    if(e.key === 'Enter') {
+      e.preventDefault();
+      lupa.click();
+    }
+  });
+</script>
+
+
+    
+  </header>
+  <!-- CARRUSEL -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="imagenes/hospital1.jpg" alt="hospital" style="width: 100%; height: 280px; object-fit: cover;">
+          <div class="carousel-caption" style="background: rgba(0, 51, 102, 0.6); border-radius: 8px; padding: 12px 25px; max-width: 60%; left: 20px; bottom: 20px; text-align: left;">
+            <h3 style="color: #fff; font-weight: bold;">HOSPITAL MUNICIPAL BOLIVIANO HOLANDÉS</h3>
+            <p style="color: #e0e0e0;">Comprometidos con tu salud y bienestar.</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="imagenes/medicos.webp" alt="personal médico" style="width: 100%; height: 280px; object-fit: cover;">
+          <div class="carousel-caption" style="background: rgba(0, 51, 102, 0.6); border-radius: 8px; padding: 12px 25px; max-width: 60%; left: 20px; bottom: 20px; text-align: left;">
+            <h3 style="color: #fff; font-weight: bold;">ATENCIÓN MÉDICA DE CALIDAD</h3>
+            <p style="color: #e0e0e0;">Un equipo profesional a tu servicio.</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="imagenes/urgencias.jpg" alt="urgencias" style="width: 100%; height: 280px; object-fit: cover;">
+          <div class="carousel-caption" style="background: rgba(0, 51, 102, 0.6); border-radius: 8px; padding: 12px 25px; max-width: 60%; left: 20px; bottom: 20px; text-align: left;">
+            <h3 style="color: #fff; font-weight: bold;">SERVICIO DE URGENCIAS 24/7</h3>
+            <p style="color: #e0e0e0;">Estamos cuando más nos necesitas.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Flechas -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color: #003366;"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color: #003366;"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+<style>
+.icon-item {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Estilo del tooltip (oculto por defecto) */
+.icon-item .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Mostrar arriba del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Flecha del tooltip */
+.icon-item .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* Flecha abajo del tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Mostrar tooltip al pasar el mouse */
+.icon-item:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+<nav>
+  <div class="icon-bar">
+    <div class="icon-item" data-target="#perfil">
+      <i class="glyphicon glyphicon-user"></i>
+      <span>Perfil</span>
+      <div class="tooltip-text">Aquí está tu perfil</div>
+    </div>
+    <div class="icon-item" data-target="#turno">
+      <i class="glyphicon glyphicon-calendar"></i>
+      <span>Turnos</span>
+      <div class="tooltip-text">Consulta tus turnos disponibles</div>
+    </div>
+    <div class="icon-item" data-target="#profesional">
+      <i class="glyphicon glyphicon-briefcase"></i>
+      <span>Profesionales</span>
+      <div class="tooltip-text">Lista de profesionales del hospital</div>
+    </div>
+    <div class="icon-item" data-target="#estudios">
+      <i class="glyphicon glyphicon-folder-open"></i>
+      <span>Estudios</span>
+      <div class="tooltip-text">Tus estudios médicos aquí</div>
+    </div>
+    <div class="icon-item" data-target="#mensajes">
+      <i class="glyphicon glyphicon-envelope"></i>
+      <span>Mensajes</span>
+      <div class="tooltip-text">Revisa tus mensajes</div>
+    </div>
+  </div>
+</nav>
+
+  
+  
+  
+  <!-- SECCIÓN: Jumbotron de bienvenida y presentación -->
+  <section id="SECCION1">
+    <div style="display: grid; grid-template-columns: 200px 1fr 1fr; grid-template-rows: repeat(3, auto); gap: 20px; padding: 20px;">
+  
+      <!-- ASIDE: Columna 1 (filas 1 a 3) -->
+      <!-- ASIDE: Columna 1 (filas 1 a 3) -->
+<!-- ASIDE: Columna 1 (filas 1 a 3) -->
+<aside style="background-color: #dff0d8; padding: 20px; border-radius: 10px; grid-row: 1 / span 3;">
+  <h2>¡Bienvenido!</h2>
+  <p>Nos alegra tenerte aquí. Esperamos que encuentres toda la información y servicios que necesitas para cuidar tu salud.</p>
+  <p>Si necesitas ayuda, no dudes en contactarnos.</p>
+
+  <hr style="margin: 20px 0; border-top: 1px solid #b2d8b2;" />
+
+  <h3 style="margin-bottom: 10px;">📰 Noticias Médicas</h3>
+  <div style="display: flex; flex-direction: column; gap: 15px;">
+    <!-- Noticia 1 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Vacuna contra el dengue</h4>
+      <p style="margin: 5px 0;">Nueva vacuna aprobada en Bolivia para combatir el dengue. Disponible en hospitales principales.</p>
+      <small style="color: #666;">Publicado el 5 de junio de 2025</small>
+    </div>
+
+    <!-- Noticia 2 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Avances en cardiología</h4>
+      <p style="margin: 5px 0;">Médicos bolivianos presentan nuevos tratamientos no invasivos para problemas cardíacos.</p>
+      <small style="color: #666;">Publicado el 3 de junio de 2025</small>
+    </div>
+
+    <!-- Noticia 3 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Prevención de infecciones respiratorias</h4>
+      <p style="margin: 5px 0;">Consejos para prevenir enfermedades respiratorias en temporada de frío. ¡Cuida a tu familia!</p>
+      <small style="color: #666;">Publicado el 1 de junio de 2025</small>
+    </div>
+
+    <!-- Noticia 4 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Nueva unidad de oncología</h4>
+      <p style="margin: 5px 0;">Santa Salud inaugura una moderna unidad de oncología con tecnología de última generación.</p>
+      <small style="color: #666;">Publicado el 30 de mayo de 2025</small>
+    </div>
+
+    <!-- Noticia 5 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Campaña de salud gratuita</h4>
+      <p style="margin: 5px 0;">Este fin de semana se realizará una campaña gratuita de detección de diabetes y presión arterial.</p>
+      <small style="color: #666;">Publicado el 28 de mayo de 2025</small>
+    </div>
+
+    <!-- Noticia 6 -->
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h4 style="margin: 0;">Nuevo quirófano inteligente</h4>
+      <p style="margin: 5px 0;">Santa Salud instala su primer quirófano inteligente con asistencia robótica para cirugías precisas.</p>
+      <small style="color: #666;">Publicado el 25 de mayo de 2025</small>
+    </div>
+  </div>
+</aside>
+
+
+  
+      <!-- COLUMNA 2 - FILA 1 -->
+      <div class="services-hover" style="grid-column: 2; grid-row: 1; background-color: #f9f9f9; border-radius: 10px; padding: 15px;">
+        <h2 class="text-center">Nuestros Servicios Médicos Más Solicitados</h2>
+        <div class="preview-container">
+          <iframe id="service-preview"
+            width="100%" height="400"
+            src="https://www.youtube.com/embed/OThMor5qHvo?autoplay=1&mute=1&loop=1&playlist=OThMor5qHvo&controls=0&rel=0"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="cards">
+          <div class="card-item" data-video-id="OFYK3OS7T4E">
+            <img src="imagenes/hosp1.jpg" alt="Consulta General" />
+            <h5>Consulta General</h5>
+          </div>
+          <div class="card-item" data-video-id="MoxwwEI48IA">
+            <img src="imagenes/pediatria1.jpeg" alt="Pediatría" />
+            <h5>Pediatría</h5>
+          </div>
+          <div class="card-item" data-video-id="_QsVOm68fGk">
+            <img src="imagenes/cardiologia.jpg" alt="Cardiología" />
+            <h5>Cardiología</h5>
+          </div>
+        </div>
+      </div>
+  
+      <!-- COLUMNA 3 - FILA 1 -->
+<div style="grid-column: 3; grid-row: 1; background-color: #eff2f3; padding: 20px; border-radius: 10px; height: 100%; display: flex; flex-direction: column;">
+
+  <div class="row" style="flex: 1; height: 100%;">
+    
+    <!-- Menú de pestañas -->
+    <nav id="about-nav" class="col-md-4 nav nav-pills nav-stacked" role="tablist" style="height: 100%;">
+      <a class="nav-link active mb-2 text-dark" data-toggle="pill" href="#espacio-unico">🏥 Un Espacio Único</a>
+      <a class="nav-link mb-2 text-dark" data-toggle="pill" href="#infraestructura">🏗️ Infraestructura</a>
+      <a class="nav-link mb-2 text-dark" data-toggle="pill" href="#tecnologia">💻 Tecnología</a>
+      <a class="nav-link text-dark" data-toggle="pill" href="#equipo">👩‍⚕️ Nuestro Equipo</a>
+    </nav>
+
+    <!-- Contenido de cada pestaña -->
+    <div class="col-md-8" style="height: 100%; overflow-y: auto;">
+      <div class="tab-content text-secondary" style="height: 100%;">
+
+        <!-- ESPACIO ÚNICO -->
+        <div id="espacio-unico" class="tab-pane fade in active">
+          <h4 class="text-primary">🏥 Un Espacio Único</h4>
+          <p>
+            Nuestro centro médico fue diseñado pensando en el confort, la privacidad y la calidez humana. Desde que ingresas, sentirás una atmósfera de tranquilidad y atención personalizada.
+          </p>
+          <ul>
+            <li>Recepción amable y rápida</li>
+            <li>Espacios adaptados para personas con movilidad reducida</li>
+            <li>Iluminación natural, colores suaves y música ambiental</li>
+          </ul>
+          <img src="imagenes/familia.jpg" class="img-responsive img-rounded" alt="Espacio único del hospital" />
+        </div>
+
+        <!-- INFRAESTRUCTURA -->
+        <div id="infraestructura" class="tab-pane fade">
+          <h4 class="text-primary">🏗️ Infraestructura Moderna</h4>
+          <p>
+            Contamos con más de 3.000 m² construidos, organizados para facilitar tu atención:
+          </p>
+          <ul>
+            <li>24 consultorios especializados</li>
+            <li>Áreas de espera con wifi, cargadores y pantallas informativas</li>
+            <li>Centro de diagnóstico integral con acceso inmediato</li>
+          </ul>
+          <img src="imagenes/infraestructura.jfif" class="img-responsive img-rounded" alt="Infraestructura hospitalaria" />
+        </div>
+
+        <!-- TECNOLOGÍA -->
+        <div id="tecnologia" class="tab-pane fade">
+          <h4 class="text-primary">💻 Tecnología de Punta</h4>
+          <p>
+            Invertimos continuamente en equipamiento de última generación para mejorar tus resultados:
+          </p>
+          <ul>
+            <li>Tomografía multicorte, ecografías 4D, resonancia magnética</li>
+            <li>Historia clínica electrónica y receta digital</li>
+            <li>Resultados de laboratorio online y en tiempo real</li>
+          </ul>
+          <img src="imagenes/equipo-medico.jpg" class="img-responsive img-rounded" alt="Equipos médicos modernos" />
+        </div>
+
+        <!-- EQUIPO MÉDICO -->
+        <div id="equipo" class="tab-pane fade">
+          <h4 class="text-primary">👩‍⚕️ Nuestro Equipo</h4>
+          <p>
+            El corazón del hospital está en nuestros profesionales: médicos, enfermeras, técnicos y personal administrativo:
+          </p>
+          <ul>
+            <li>Capacitación constante en nuevas técnicas y atención humanizada</li>
+            <li>Trabajo en equipo multidisciplinario</li>
+            <li>Vocación de servicio con empatía</li>
+          </ul>
+          <img src="imagenes/pediatria2.jpg" class="img-responsive img-rounded" alt="Equipo de profesionales" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- COLUMNA 2 - FILA 2 -->
+    <!-- COLUMNA 2 - FILA 2 -->
+<div style="grid-column: 2; grid-row: 2; background-color: #f1f1f1; padding: 15px; border-radius: 10px; height: 100%;">
+  <div id="carouselHospital" class="carousel slide" data-ride="carousel" style="height: 100%;">
+
+    <!-- Slides -->
+    <div class="carousel-inner" style="height: 100%; border-radius: 10px; overflow: hidden;">
+
+      <div class="item active" style="height: 100%;">
+        <img src="imagenes/hops4.jpeg" alt="Área de emergencia" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="carousel-caption" style="background-color: rgba(255,255,255,0.8); border-radius: 6px; padding: 10px;">
+          <h5 style="color: #000;">Área de Emergencias</h5>
+          <p style="color: #000;">Atención inmediata y especializada las 24 horas del día.</p>
+        </div>
+      </div>
+
+      <div class="item" style="height: 100%;">
+        <img src="imagenes/hospital44.jfif" alt="Consultorios médicos" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="carousel-caption" style="background-color: rgba(255,255,255,0.8); border-radius: 6px; padding: 10px;">
+          <h5 style="color: #000;">Consultorios Modernos</h5>
+          <p style="color: #000;">Espacios cómodos y seguros para tu evaluación médica.</p>
+        </div>
+      </div>
+
+      <div class="item" style="height: 100%;">
+        <img src="imagenes/urgencias.jpg" alt="Laboratorio" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="carousel-caption" style="background-color: rgba(255,255,255,0.8); border-radius: 6px; padding: 10px;">
+          <h5 style="color: #000;">Laboratorio Avanzado</h5>
+          <p style="color: #000;">Diagnóstico rápido y preciso con tecnología de punta.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controles -->
+    <a class="left carousel-control" href="#carouselHospital" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#carouselHospital" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+
+  </div>
+</div>
+
+      
+     <div style="background-color: #f1f1f1; padding: 15px; border-radius: 10px;">
+  <h2>Contáctanos y saca tu ficha</h2>
+  <p>Completa el siguiente formulario para recibir atención personalizada. ¡Estamos para ayudarte!</p>
+
+  <form id="formContacto" class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label for="contactNombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="contactNombre" name="nombre" required placeholder="Tu nombre">
+      <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="contactApellido" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="contactApellido" name="apellido" required placeholder="Tu apellido">
+      <div class="invalid-feedback">Por favor ingresa tu apellido.</div>
+    </div>
+
+    <div class="col-md-12">
+      <label for="contactEmail" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="contactEmail" name="email" required placeholder="tuemail@ejemplo.com">
+      <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactCiudad" class="form-label">Ciudad</label>
+      <select class="form-control" id="contactCiudad" name="ciudad" required>
+        <option value="" disabled selected>Seleccione una ciudad</option>
+        <option>La Paz</option>
+        <option>El Alto</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+        <option>Santa Cruz</option>
+        <option>Beni</option>
+        <option>Pando</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Cochabamba</option>
+      </select>
+      <div class="invalid-feedback">Selecciona una ciudad válida.</div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="contactDepartamento" class="form-label">Departamento</label>
+      <select class="form-control" id="contactDepartamento" name="departamento" required>
+        <option value="" disabled selected>Seleccione un departamento</option>
+        <option>La Paz</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+        <option>Santa Cruz</option>
+        <option>Beni</option>
+        <option>Pando</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Cochabamba</option>
+      </select>
+      <div class="invalid-feedback">Selecciona un departamento válido.</div>
+    </div>
+
+    <div class="col-md-12">
+      <label for="contactMensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="contactMensaje" name="mensaje" rows="3" required placeholder="Tu mensaje o consulta"></textarea>
+      <div class="invalid-feedback">Escribe un mensaje.</div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="contactTerminos" required>
+        <label class="form-check-label" for="contactTerminos">
+          Acepto los términos y condiciones
+        </label>
+        <div class="invalid-feedback">Debes aceptar los términos antes de enviar.</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+  </form>
+
+  <!-- Mensaje de éxito oculto -->
+  <div id="mensajeContactoExito" style="display:none; margin-top: 15px; font-weight: bold; color: green;"></div>
+</div>
+
+<script>
+  let contadorFicha = 1; // contador inicial para la ficha
+
+  const form = document.getElementById("formContacto");
+  const mensaje = document.getElementById("mensajeContactoExito");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return; // No continúa si no es válido
+    }
+
+    // Si pasa validación:
+    mensaje.style.color = "green";
+    mensaje.textContent = `¡Gracias por contactarnos! Tu ficha es el número ${contadorFicha}.`;
+    mensaje.style.display = "block";
+
+    contadorFicha++;
+    form.reset();
+    form.classList.remove("was-validated");
+  });
+</script>
+
+
+
+  
+      <!-- COLUMNA 2 - FILA 3 -->
+    <!-- COLUMNA 2 - FILA 3 -->
+<div style="grid-column: 2; grid-row: 3; background-color: #f1f1f1; padding: 15px; border-radius: 10px;">
+  <h4>Ubicación del Hospital Boliviano Holandés</h4>
+  <p>Encuéntranos en El Alto, zona Mercedario. ¡Tu salud más cerca de ti!</p>
+
+  <!-- Mapa integrado -->
+  <div style="width: 100%; height: 300px; border-radius: 10px; overflow: hidden;">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.0376462083252!2d-68.1536535!3d-16.5223891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf7a15ce04cb%3A0xab53e7f52ddcd0d7!2sHospital%20Boliviano%20Holand%C3%A9s!5e0!3m2!1ses!2sbo!4v1717871110000!5m2!1ses!2sbo"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+
+  
+      <!-- COLUMNA 3 - FILA 3 -->
+      <div style="grid-column: 3; grid-row: 3; padding: 15px; background-color: #f1f1f1; border-radius: 10px;">
+        <h4>Conoce a nuestro equipo</h4>
+      
+        <div class="card-grid" style="display: flex; flex-wrap: wrap; gap: 15px;">
+          <!-- Fila 1 -->
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor7.jpg" alt="Doctor 1">
+            <div class="overlay">
+              <h5>Dr. Ximena Yesenoa Murguia Lima</h5>
+              <p>Medico Cirujano.</p>
+            </div>
+          </div>
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor8.jpg" alt="Doctor 2">
+            <div class="overlay">
+              <h5>Dra. Dora Quispe Coarite</h5>
+              <p>Medicina Interna.</p>
+            </div>
+          </div>
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor9.jpg" alt="Fisioterapeuta">
+            <div class="overlay">
+              <h5>Dra. Claudia Soldado Condori</h5>
+              <p>Medico Cirujano Ginecología y Obstetrica.</p>
+            </div>
+          </div>
+      
+          <!-- Fila 2 -->
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor3.webp" alt="Doctor 4">
+            <div class="overlay">
+              <h5>Dr. Franz R. Enríquez Q</h5>
+              <p> Jefe de Servicio.</p>
+            </div>
+          </div>
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor5.jpg" alt="Doctora 5">
+            <div class="overlay">
+              <h5>Dr. Raúl Verástegui</h5>
+              <p>Médico de planta, profesor en UPEA.</p>
+            </div>
+          </div>
+          <div class="card" style="flex: 1 1 calc(33.333% - 10px);">
+            <img src="imagenes/doctor1.jpg" alt="Doctor 6">
+            <div class="overlay">
+              <h5>Dr. Hugo Borda</h5>
+              <p>Profesor UMSA, jefe de enseñanza y gestión de calidad HMBH.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+  
+    </div>
+  </section>
+  
+  <section id="SECCION2" class="py-5 d-flex align-items-center justify-content-center w-100" 
+  style="background-color: #81acec; color: black; min-height: 100vh; padding-left: 0; padding-right: 0; margin: 0;">
+  
+  <div class="container-fluid px-4">
+
+    <h2 class="text-center mb-4" style="font-family: cursive; color: #141516;">
+      ¡Elige el servicio médico que necesitas!
+    </h2>
+
+    <p class="lead text-center mb-5 px-3" style="font-family: cursive; color: #1f2325; max-width: 1000px; margin: auto;">
+      Nuestra plataforma te ofrece acceso a una red integral de especialidades médicas y servicios complementarios diseñados 
+      para cuidar tu salud y bienestar en todas las etapas de la vida. Desde la prevención hasta el tratamiento especializado, 
+      nos enfocamos en brindarte atención de calidad con profesionales altamente capacitados y tecnología de punta.
+    </p>
+
+    <p class="text-justify mb-5 px-3" style="font-family: cursive; max-width: 1000px; margin: auto;">
+      Las especialidades médicas permiten un enfoque específico en áreas del cuerpo humano o tipos de enfermedades. Por ejemplo, 
+      la <strong>Cardiología</strong> se dedica al estudio del sistema cardiovascular, mientras que la <strong>Neurología</strong> 
+      se ocupa de los trastornos del sistema nervioso. La atención pediátrica es crucial para asegurar un desarrollo saludable 
+      desde los primeros años. Además, los servicios complementarios como <em>Radiología, Laboratorio Clínico y Psicología</em> 
+      brindan el apoyo diagnóstico y terapéutico necesario para una atención médica integral.
+    </p>
+
+    <!-- Formularios selección -->
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-6 col-lg-5 mb-3">
+        <label for="select-large" class="form-label" style="font-family: cursive; color: #1f2325;">
+          Especialidad principal:
+        </label>
+        <select id="select-large" class="form-select form-select-lg" 
+          style="border-radius: 10px; background-color: #3f4547; color: #fff; font-family: cursive;">
+          <option selected>Selecciona una especialidad</option>
+          <option value="1">Cardiología</option>
+          <option value="2">Neurología</option>
+          <option value="3">Pediatría</option>
+          <option value="4">Oncología</option>
+          <option value="5">Ginecología</option>
+          <option value="6">Traumatología</option>
+          <option value="7">Dermatología</option>
+          <option value="8">Psiquiatría</option>
+          <option value="9">Medicina Interna</option>
+        </select>
+      </div>
+      <div class="col-md-6 col-lg-5 mb-3">
+        <label for="select-small" class="form-label" style="font-family: cursive; color: #0e0f0f;">
+          Servicios complementarios:
+        </label>
+        <select id="select-small" class="form-select form-select-sm" 
+          style="border-radius: 10px; background-color: #353838; color: #fff; font-family: cursive;">
+          <option selected>Selecciona un servicio</option>
+          <option value="1">Laboratorio clínico</option>
+          <option value="2">Radiología</option>
+          <option value="3">Terapia física</option>
+          <option value="4">Consulta general</option>
+          <option value="5">Urgencias</option>
+          <option value="6">Vacunación</option>
+          <option value="7">Odontología</option>
+          <option value="8">Farmacia</option>
+          <option value="9">Psicología</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Cards servicios destacados -->
+    <div class="row g-4 justify-content-center">
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow" style="border-radius: 15px; overflow: hidden;">
+          <img src="imagenes/DENUNCIA.jpeg" class="card-img-top" alt="Cardiología" style="height: 180px; object-fit: cover;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Servicio más solicitado</h5>
+            <p class="card-text">Atención especializada en cardiología con tecnología avanzada.</p>
+            <a href="servicios.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow" style="border-radius: 15px; overflow: hidden;">
+          <img src="imagenes/neurologia.jpg" class="card-img-top" alt="Neurología" style="height: 180px; object-fit: cover;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Especialidad en Neurología</h5>
+            <p class="card-text">Diagnóstico y tratamiento de enfermedades neurológicas.</p>
+            <a href="servicios.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100 shadow" style="border-radius: 15px; overflow: hidden;">
+          <img src="imagenes/pediatria1.jpeg" class="card-img-top" alt="Pediatría" style="height: 180px; object-fit: cover;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Cuidado pediátrico</h5>
+            <p class="card-text">Atención integral para el bienestar de tus hijos.</p>
+            <a href="servicios.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Párrafo de cierre -->
+    <p class="mt-5 text-center px-3" style="font-family: cursive; max-width: 1000px; margin: auto;">
+      En nuestro centro de salud, nos comprometemos a proporcionarte una experiencia médica centrada en el paciente, 
+      promoviendo la prevención, el diagnóstico oportuno y el tratamiento efectivo. ¡Tu bienestar es nuestra prioridad!
+    </p>
+
+  </div>
+</section>
+
+
+  <nav aria-label="Page navigation example" style="display: flex; justify-content: center; margin-top: 3px;">
+    <ul class="pagination">
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="index11.html">1</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="citas.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="servicios.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="citas.html">Siguiente</a></li>
+    </ul>
+  </nav>
+ 
+  
+
+  <!-- FOOTER: Información adicional con acordeón -->
+  <footer style="background-color: #003366; color: #fff; font-family: Arial, sans-serif; padding: 40px 0;">
+  <div class="container" style="max-width: 1140px; margin: 0 auto;">
+    <div class="row">
+      
+      <!-- Servicios con acordeones (panel-group) -->
+      <div class="col-sm-4">
+        <h5 style="border-bottom: 2px solid #0fa3e7; padding-bottom: 10px; margin-bottom: 20px;">Servicios Especializados del Hospital</h5>
+        <div class="panel-group" id="accordionServicios" role="tablist" aria-multiselectable="true">
+          
+          <div class="panel panel-default" style="background: transparent; border: none; color: #a8cce7;">
+            <div class="panel-heading" role="tab" id="headingOne" style="background: transparent; border: none;">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordionServicios" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #a8cce7;">
+                  Cardiología
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" style="color: #ddd; font-size: 14px;">
+              <div class="panel-body" style="background: transparent; border: none; padding-left: 0;">
+                Contamos con tecnología avanzada para diagnóstico y tratamiento de enfermedades cardíacas.
+              </div>
+            </div>
+          </div>
+  
+          <div class="panel panel-default" style="background: transparent; border: none; color: #a8cce7;">
+            <div class="panel-heading" role="tab" id="headingTwo" style="background: transparent; border: none;">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionServicios" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: #a8cce7;">
+                  Neurología
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" style="color: #ddd; font-size: 14px;">
+              <div class="panel-body" style="background: transparent; border: none; padding-left: 0;">
+                Especialistas en diagnóstico y tratamiento de enfermedades neurológicas con equipos de última generación.
+              </div>
+            </div>
+          </div>
+  
+          <div class="panel panel-default" style="background: transparent; border: none; color: #a8cce7;">
+            <div class="panel-heading" role="tab" id="headingThree" style="background: transparent; border: none;">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordionServicios" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: #a8cce7;">
+                  Pediatría
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree" style="color: #ddd; font-size: 14px;">
+              <div class="panel-body" style="background: transparent; border: none; padding-left: 0;">
+                Atención integral para el cuidado y tratamiento de la salud infantil.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Enlaces -->
+      <div class="col-sm-4">
+        <h5 style="border-bottom: 2px solid #0fa3e7; padding-bottom: 10px; margin-bottom: 20px;">Enlaces útiles</h5>
+        <ul style="list-style: none; padding: 0; font-size: 14px;">
+          <li style="margin-bottom: 8px;"><a href="#" style="color: #a8cce7; text-decoration: none;">Sobre Nosotros</a></li>
+          <li style="margin-bottom: 8px;"><a href="#" style="color: #a8cce7; text-decoration: none;">Contacto</a></li>
+          <li style="margin-bottom: 8px;"><a href="#" style="color: #a8cce7; text-decoration: none;">Servicios</a></li>
+          <li style="margin-bottom: 8px;"><a href="#" style="color: #a8cce7; text-decoration: none;">Noticias</a></li>
+          <li style="margin-bottom: 8px;"><a href="#" style="color: #a8cce7; text-decoration: none;">Privacidad</a></li>
+          <li><a href="#" style="color: #a8cce7; text-decoration: none;">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      
+      <!-- QR + Visitas -->
+      <div class="col-sm-4 text-center">
+        <h5 style="border-bottom: 2px solid #0fa3e7; padding-bottom: 10px; margin-bottom: 20px;">Escanea nuestro QR</h5>
+        <img src="imagenes/qr2.png" alt="QR del hospital" style="width: 140px; height: 140px; margin-bottom: 20px; border: 2px solid #0fa3e7; border-radius: 8px;">
+        
+        <h5 style="margin-bottom: 10px;">Visitas al sitio</h5>
+        <p id="visit-count" style="font-size: 28px; font-weight: bold; color: #0fa3e7;">0</p>
+      </div>
+      
+    </div>
+    
+    <div style="text-align: center; font-size: 13px; color: #a0b7d9; margin-top: 30px;">
+      &copy; 2025 Hospital Holandes. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Contador de visitas usando localStorage
+  let visits = localStorage.getItem("visitCount");
+  if (!visits) {
+    visits = 1;
+  } else {
+    visits = parseInt(visits) + 1;
+  }
+  localStorage.setItem("visitCount", visits);
+  document.getElementById("visit-count").textContent = visits;
+</script>
+
+
+<script>
+  $(".icon-item").click(function () {
+    const target = $(this).data("target");
+
+    // Si el contenido ya está visible, lo ocultamos con animación
+    if ($(target).is(":visible")) {
+      $(target).slideUp(400);
+    } else {
+      // Ocultamos todos los demás con animación suave
+      $(".info-box").filter(":visible").slideUp(400, function () {
+        // Luego mostramos el seleccionado con fade + slide
+        $(target).css({ opacity: 0, display: 'block' })
+          .animate({ opacity: 1, top: 0 }, 400);
+      });
+      // Si no hay otros abiertos, mostramos directamente con fade
+      if ($(".info-box:visible").length === 0) {
+        $(target).css({ opacity: 0, display: 'block' })
+          .animate({ opacity: 1, top: 0 }, 400);
+      }
+    }
+  });
+</script>
+<script>
+  $(function(){
+    $(".card-item").hover(function(){
+      const video = $(this).data("video");
+      $("#service-preview").attr("src", video)[0].play();
+    }, function(){
+      // opcional: revertir o mantener el video al salir
+    });
+  });
+ 
+
+</script>
+<script>
+  $(".card-item").hover(function() {
+    const id = $(this).data("video-id");
+    const url = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&rel=0`;
+    $("#service-preview").attr("src", url);
+  }, function() {
+    // opcional: mantén el video o regresa al default
+  });
+  
+</script>
+<script>
+  document.getElementById("busqueda").addEventListener("input", function () {
+    const valor = this.value.toLowerCase();
+    const secciones = document.querySelectorAll("#contenidoHospital .seccion");
+    secciones.forEach(sec => {
+      const texto = sec.textContent.toLowerCase();
+      sec.style.display = texto.includes(valor) ? "block" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
