@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal del Paciente - Hospital Boliviano Holandés</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+    }
+    nav {
+      background-color: #003366;
+      padding: 15px 0;
+    }
+    nav .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .dashboard h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 30px;
+    }
+    .panel-option {
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      background-color: #f0f4f8;
+      margin-bottom: 10px;
+    }
+    .panel-option:hover {
+      background-color: #e1ecf4;
+      transform: translateY(-5px);
+      cursor: pointer;
+    }
+    .panel-option i {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    .panel-option h4 {
+      color: #003366;
+      font-weight: bold;
+    }
+    .panel-content {
+      display: none;
+      padding: 20px;
+      background-color: #eef4fb;
+      border-left: 5px solid #003366;
+      margin-bottom: 20px;
+      border-radius: 0 0 8px 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+          <a href="index11.html">Inicio</a>
+          <a href="citas.html">Citas</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="medicos.html">Médicos</a>
+          <a href="emergencias.html">Urgencias 24/7</a>
+          <a href="informacion.html">Información</a>
+          <a href="contacto.html">Contacto</a>
+        </div>
+      </nav>
+      
+
+  <main class="dashboard">
+    <h2>Portal del Paciente</h2>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-resultados">
+          <i class="glyphicon glyphicon-list-alt"></i>
+          <h4>Resultados de Laboratorio</h4>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-citas">
+          <i class="glyphicon glyphicon-calendar"></i>
+          <h4>Mis Citas</h4>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-perfil">
+          <i class="glyphicon glyphicon-user"></i>
+          <h4>Datos Personales</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="contenido-resultados" class="panel-content">
+      <h4>Análisis recientes:</h4>
+      <ul>
+        <li>Hemograma completo - 25/05/2025</li>
+        <li>Glucosa - 20/05/2025</li>
+        <li>Colesterol - 15/05/2025</li>
+      </ul>
+    </div>
+
+    <div id="contenido-citas" class="panel-content">
+      <h4>Próximas citas:</h4>
+      <ul>
+        <li>Consulta médica general - 10/06/2025</li>
+        <li>Control nutricional - 15/06/2025</li>
+      </ul>
+    </div>
+
+    <div id="contenido-perfil" class="panel-content">
+      <h4>Datos del paciente:</h4>
+      <p><strong>Nombre:</strong> Juan Pérez</p>
+      <p><strong>Edad:</strong> 45 años</p>
+      <p><strong>Correo:</strong> juan.perez@example.com</p>
+    </div>
+
+    <div class="row" style="margin-top: 30px;">
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-historial">
+          <i class="glyphicon glyphicon-folder-open"></i>
+          <h4>Historial Médico</h4>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-mensajes">
+          <i class="glyphicon glyphicon-envelope"></i>
+          <h4>Mensajes</h4>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel-option" data-target="#contenido-salir">
+          <i class="glyphicon glyphicon-log-out"></i>
+          <h4>Cerrar Sesión</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="contenido-historial" class="panel-content">
+      <h4>Historial médico:</h4>
+      <p>Enfermedades crónicas: Diabetes, Hipertensión.</p>
+      <p>Medicamentos actuales: Metformina, Losartán.</p>
+    </div>
+
+    <div id="contenido-mensajes" class="panel-content">
+      <h4>Comunicados:</h4>
+      <p><strong>01/06:</strong> Recuerde que debe traer su receta médica en cada consulta.</p>
+      <p><strong>30/05:</strong> Se confirmó su cita con el Dr. Gutiérrez.</p>
+    </div>
+
+    <div id="contenido-salir" class="panel-content">
+      <h4>¿Desea cerrar sesión?</h4>
+      <p>Gracias por visitar el portal. Puede cerrar la sesión desde el botón superior o simplemente cerrar la pestaña.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Hospital Boliviano Holandés - Todos los derechos reservados
+  </footer>
+
+  <script>
+    $(".panel-option").on("click", function() {
+      const target = $(this).data("target");
+      $(".panel-content").not(target).slideUp();
+      $(target).slideToggle();
+    });
+  </script>
+
+</body>
+</html>

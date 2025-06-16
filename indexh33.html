@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delizia Helados</title>
+
+  <!-- Estilos CSS personalizados -->
+  <link rel="stylesheet" href="STYLES/estilo3.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: rgb(188, 201, 197);">
+<header>
+  <!-- Contenedor principal en Flexbox -->
+  <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+  
+    <!-- Carrusel sin restricciones de ancho -->
+    <div style="flex: 1; max-width: 900px;">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores del slider -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+  
+        <!-- Contenido del carrusel -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="imagenes/helado3.png" alt="helados" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>¡HELADOS ARTESANALES!</h3>
+              <p>ÚNETE A LA FAMILIA DELIZIA</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="imagenes/rocky.jpeg" alt="Helado" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>FRESCURA Y CALIDAD</h3>
+              <p>Helados creados con los mejores ingredientes.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="imagenes/helado4.png" alt="Logo Delizia" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>DELIZIA</h3>
+              <p>¡Un sabor único y delicioso!</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Controles del carrusel -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Imagen a la derecha del carrusel -->
+    <div style="padding-left: 20px; flex-shrink: 0;">
+      <img src="imagenes/logod.webp" alt="Logo Delizia" style="height: 250px; width: 250px;">
+    </div>
+  </div>
+  
+</header>
+<nav>
+    <div style="text-align: center;">
+        <ul class="pagination">
+        <li class="page-item"><a style="font-size: 30px; font-family: cursive;" class="page-link" href="#">todos nuestros helados!!!!?</a></li>
+ 
+      </ul>
+    </div>
+    
+</nav>
+<section class="container mt-5">
+    <h2 class="text-center text-primary mb-4">Catálogo de Helados Delizia</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Producto 1 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/healdo1.webp" class="card-img-top" alt="Helado de vainilla">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Vainilla</h5>
+            <p class="card-text">El clásico sabor de vainilla, cremoso y delicioso. Perfecto para cualquier ocasión.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div> 
+        </div>
+        </div>
+      </div>
+  
+      <!-- Producto 2 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado2.png" class="card-img-top" alt="Helado de chocolate">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Chocolate</h5>
+            <p class="card-text">El helado más indulgente con un rico sabor a chocolate puro. Ideal para los amantes del cacao.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>  
+        </div>
+        </div>
+      </div>
+  
+      <!-- Producto 3 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado3.png" class="card-img-top" alt="Helado de fresa">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Fresa</h5>
+            <p class="card-text">Fresca y natural fresa, ideal para disfrutar en verano.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>  
+        </div>
+        </div>
+      </div>
+  
+      <!-- Producto 4 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado4.png" class="card-img-top" alt="Helado de menta">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Menta</h5>
+            <p class="card-text">Refrescante helado de menta, con un toque suave y fresco que te encantará.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 5 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado5.jpg" class="card-img-top" alt="Helado de café">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Café</h5>
+            <p class="card-text">Ideal para los fanáticos del café. ¡Un sabor fuerte y delicioso!</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 6 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado6.png" class="card-img-top" alt="Helado de durazno">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Durazno</h5>
+            <p class="card-text">Una combinación perfecta de dulzura y frescura. ¡Siente el sabor del verano!</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 7 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado7.png" class="card-img-top" alt="Helado de pistacho">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Pistacho</h5>
+            <p class="card-text">Un sabor exclusivo y sofisticado, el pistacho es ideal para los que buscan algo diferente.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 8 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado8.webp" class="card-img-top" alt="Helado de mango">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Mango</h5>
+            <p class="card-text">Exquisito helado de mango natural. ¡Un toque tropical en cada bocado!</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 9 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado9.png" class="card-img-top" alt="Helado de maracuyá">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Maracuyá</h5>
+            <p class="card-text">Una explosión de sabor ácido y dulce que te hará querer más.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 10 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado10.png" class="card-img-top" alt="Helado de coco">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Coco</h5>
+            <p class="card-text">Sabor suave y tropical que te transportará a una isla paradisíaca.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 11 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado11.jpg" class="card-img-top" alt="Helado de oreo">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Oreo</h5>
+            <p class="card-text">¡El clásico de siempre! Crujientes trozos de Oreo en cada bocado.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Producto 12 -->
+      <div class="col">
+        <div class="card">
+          <img src="imagenes/helado12.png" class="card-img-top" alt="Helado de frambuesa">
+          <div class="card-body">
+            <h5 class="card-title">Helado de Frambuesa</h5>
+            <p class="card-text">Dulce y ácido, perfecto para los amantes de las frutas rojas.</p>
+            <div class="btn-pedir">
+                <a href="index22.html" class="btn btn-pedir">Pedir</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>ç
+<nav aria-label="Page navigation example" style="text-align: center;">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="index22.html">ANTERIOR</a></li>
+
+
+    </ul>
+  </nav>
+<footer>
+    <div class="col-sm-12 text-center mt-4">
+        <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Sobre Nosotros
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Fuentes en GitHub
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Iconos GitHub
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Blog de Fuentes
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Material Design
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Diseño Google
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Privacidad
+            </a>
+          </li>
+          <li>
+            <a href="#" style="font-size: 15px; color: #f06292; font-weight: bold; text-decoration: none; padding: 8px 14px; border-radius: 20px; background: #fff0f5; transition: 0.3s;">
+              Términos de Servicio
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+</footer>  
+</body>
+</html>

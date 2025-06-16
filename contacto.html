@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto - Hospital Boliviano Holandés</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    nav {
+      background-color: #003366;
+      padding: 15px 0;
+    }
+    nav .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    main.container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      color: #003366;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #003366;
+    }
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      border-color: #003366;
+      outline: none;
+    }
+    button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #002244;
+    }
+    .contact-info {
+      margin-top: 40px;
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+  <div class="container">
+    <a href="index11.html">Inicio</a>
+    <a href="citas.html">Citas</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="medicos.html">Médicos</a>
+    <a href="emergencias.html">Urgencias 24/7</a>
+    <a href="informacion.html">Información</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</nav>
+
+
+  <main class="container">
+    <h2>Contacto</h2>
+
+    <form action="#" method="POST" onsubmit="return validarFormulario()">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="+591 7xxxxxxx" pattern="[+\d\s\-]{7,15}" title="Número telefónico válido" />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Dirección:</strong> Calle Principal No. 123, El Alto, Bolivia</p>
+      <p><strong>Teléfono:</strong> +591 123 45678</p>
+      <p><strong>Email:</strong> info@hospitalholandes.bo</p>
+      <p><strong>Horario de atención:</strong> Lunes a viernes de 07:00 a 19:00 hrs</p>
+      <p><strong>Urgencias 24/7:</strong> +591 765 43210</p>
+    </div>
+  </main>
+<nav aria-label="Page navigation example" style="text-align: center; margin-top: 30px;">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="index11.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="citas.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="servicios.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="medicos.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="emergencias.html">5</a></li>
+    <li class="page-item"><a class="page-link" href="informacion.html">6</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="contacto.html">7</a>
+    </li>
+  </ul>
+</nav>
+
+  <footer>
+    &copy; 2025 Hospital Boliviano Holandés - Todos los derechos reservados
+  </footer>
+
+  <script>
+    function validarFormulario() {
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        alert('Por favor, complete los campos obligatorios.');
+        return false;
+      }
+      // Aquí puedes agregar validaciones más avanzadas si deseas.
+      alert('Mensaje enviado con éxito. ¡Gracias por contactarnos!');
+      return true; // Para que el formulario se envíe (o cambiar para integración backend)
+    }
+  </script>
+</body>
+</html>

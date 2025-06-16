@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospital Holandés - Citas</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #003366;
+      padding: 15px 0;
+    }
+    nav .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      padding: 8px 12px;
+    }
+    nav a:hover { color: #ffcc00; }
+    main.container {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #003366;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    form input:focus, form select:focus {
+      border-color: #0055aa;
+      outline: none;
+    }
+    form button {
+      background-color: #003366;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #0055aa;
+    }
+    .mensaje-exito {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 5px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+    #resumen-cita {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e9f7ef;
+      border: 1px solid #c3e6cb;
+      border-radius: 5px;
+      display: none;
+    }
+    #resumen-cita h4 {
+      margin-bottom: 12px;
+      color: #155724;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #003366;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    .pagination {
+      display: inline-flex;
+      padding-left: 0;
+      list-style: none;
+      border-radius: 0.25rem;
+      margin-top: 30px;
+    }
+    .pagination li { margin: 0 5px; }
+    .pagination .page-link {
+      color: #003366;
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem;
+      display: block;
+    }
+    .pagination .page-item.active .page-link {
+      background-color: #003366;
+      color: white;
+      border-color: #003366;
+      pointer-events: none;
+    }
+    .pagination .page-link:hover {
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="index11.html">Inicio</a>
+      <a href="citas.html">Citas</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="medicos.html">Médicos</a>
+      <a href="emergencias.html">Urgencias 24/7</a>
+      <a href="informacion.html">Información</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Agendar una Cita</h2>
+    <form id="form-cita" novalidate>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo" />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required placeholder="Ejemplo: +591 70000000" pattern="^\+?[0-9\s\-]{7,15}$" />
+
+      <label for="fecha">Fecha de la cita:</label>
+      <input type="date" id="fecha" name="fecha" required min="" />
+
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" required min="08:00" max="18:00" />
+
+      <label for="especialidad">Especialidad médica:</label>
+      <select id="especialidad" name="especialidad" required>
+        <option value="" disabled selected>Selecciona una especialidad</option>
+        <option value="general">Medicina General</option>
+        <option value="pediatria">Pediatría</option>
+        <option value="cardiologia">Cardiología</option>
+        <option value="dermatologia">Dermatología</option>
+        <option value="odontologia">Odontología</option>
+        <option value="ginecologia">Ginecología</option>
+      </select>
+
+      <button type="submit">Enviar Solicitud</button>
+    </form>
+    
+    <div class="mensaje-exito" id="mensaje-exito" role="alert" aria-live="polite">
+      Gracias por elegirnos, su cita ha sido solicitada.
+    </div>
+
+    <div id="resumen-cita">
+      <h4>Resumen de la cita:</h4>
+      <p><strong>N° de Ficha:</strong> <span id="res-ficha"></span></p>
+      <p><strong>Nombre:</strong> <span id="res-nombre"></span></p>
+      <p><strong>Email:</strong> <span id="res-email"></span></p>
+      <p><strong>Teléfono:</strong> <span id="res-telefono"></span></p>
+      <p><strong>Fecha:</strong> <span id="res-fecha"></span></p>
+      <p><strong>Hora:</strong> <span id="res-hora"></span></p>
+      <p><strong>Especialidad:</strong> <span id="res-especialidad"></span></p>
+    </div>
+  </main>
+
+  <nav aria-label="Page navigation example" style="text-align: center;">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="index11.html">1</a></li>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="citas.html">2</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="servicios.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="servicios.html">Siguiente</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    &copy; 2025 Hospital Holandés - Todos los derechos reservados
+  </footer>
+
+  <script>
+    const fechaInput = document.getElementById('fecha');
+    const hoy = new Date().toISOString().split('T')[0];
+    fechaInput.setAttribute('min', hoy);
+
+    const especialidades = {
+      general: 'Medicina General',
+      pediatria: 'Pediatría',
+      cardiologia: 'Cardiología',
+      dermatologia: 'Dermatología',
+      odontologia: 'Odontología',
+      ginecologia: 'Ginecología'
+    };
+
+    const form = document.getElementById('form-cita');
+    const mensajeExito = document.getElementById('mensaje-exito');
+    const resumen = document.getElementById('resumen-cita');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const fechaSeleccionada = new Date(fechaInput.value);
+      const hoyDate = new Date(hoy);
+      if (fechaSeleccionada < hoyDate) {
+        alert('Por favor, selecciona una fecha válida (hoy o en adelante).');
+        return;
+      }
+
+      const horaInput = document.getElementById('hora').value;
+      if (horaInput < '08:00' || horaInput > '18:00') {
+        alert('Por favor, selecciona una hora entre las 08:00 y 18:00.');
+        return;
+      }
+
+      const numeroFicha = Math.floor(Math.random() * 9000) + 1000;
+
+      const cita = {
+        ficha: numeroFicha,
+        nombre: form.nombre.value,
+        email: form.email.value,
+        telefono: form.telefono.value,
+        fecha: form.fecha.value,
+        hora: form.hora.value,
+        especialidad: form.especialidad.value,
+      };
+
+      let citasGuardadas = JSON.parse(localStorage.getItem('citasHospital')) || [];
+      citasGuardadas.push(cita);
+      localStorage.setItem('citasHospital', JSON.stringify(citasGuardadas));
+
+      mensajeExito.style.display = 'block';
+
+      document.getElementById('res-ficha').textContent = cita.ficha;
+      document.getElementById('res-nombre').textContent = cita.nombre;
+      document.getElementById('res-email').textContent = cita.email;
+      document.getElementById('res-telefono').textContent = cita.telefono;
+      document.getElementById('res-fecha').textContent = new Date(cita.fecha).toLocaleDateString();
+      document.getElementById('res-hora').textContent = cita.hora;
+      document.getElementById('res-especialidad').textContent = especialidades[cita.especialidad] || cita.especialidad;
+
+      resumen.style.display = 'block';
+
+      form.reset();
+
+     // setTimeout(() => {
+      //  mensajeExito.style.display = 'none';
+      //  resumen.style.display = 'none';
+     // }, 7000);
+    });
+  </script>
+</body>
+</html>

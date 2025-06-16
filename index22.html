@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delizia Helados</title>
+
+  <!-- Estilos CSS personalizados -->
+  <link rel="stylesheet" href="STYLES/estilo2.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: rgb(188, 201, 197);">
+<header>
+  <!-- Contenedor principal en Flexbox -->
+<div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+  
+    <!-- Carrusel sin restricciones de ancho -->
+    <div style="flex: 1; max-width: 900px;">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores del slider -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+  
+        <!-- Contenido del carrusel -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="imagenes/healdo1.webp" alt="helados" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>¡HELADOS ARTESANALES!</h3>
+              <p>ÚNETE A LA FAMILIA DELIZIA</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="imagenes/tortah.png" alt="Helado" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>FRESCURA Y CALIDAD</h3>
+              <p>Helados creados con los mejores ingredientes.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="imagenes/helado2.png" alt="Logo Delizia" style="width: 100%; height: 250px;">
+            <div class="carousel-caption">
+              <h3>DELIZIA</h3>
+              <p>¡Un sabor único y delicioso!</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Controles del carrusel -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Imagen a la derecha del carrusel -->
+    <div style="padding-left: 20px; flex-shrink: 0;">
+      <img src="imagenes/logod.webp" alt="Logo Delizia" style="height: 250px; width: 250px;">
+    </div>
+  </div>
+  
+</header>
+<nav>
+    <div style="text-align: center;">
+        <ul class="pagination">
+        <li class="page-item"><a style="font-size: 30px; font-family: cursive;" class="page-link" href="#">Solicita tu pedido aqui!!!!!</a></li>
+ 
+      </ul>
+    </div>
+    
+</nav>
+<section class="row">
+    <div class="col-md-6">
+      <form class="row g-3 needs-validation" novalidate>
+        <h3 class="text-primary">Formulario de Pedido - Helados Delizia</h3>
+        <p>Por favor, completa los siguientes campos para realizar tu pedido.</p>
+  
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" required>
+          <div class="valid-feedback">¡Perfecto!</div>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="validationCustom02" required>
+          <div class="valid-feedback">¡Perfecto!</div>
+        </div>
+  
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">Elige un nombre de usuario.</div>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Ciudad de entrega</label>
+          <input type="text" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">Proporciona una ciudad válida.</div>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Departamento</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Selecciona...</option>
+            <option>La Paz</option>
+            <option>Cochabamba</option>
+            <option>Santa Cruz</option>
+            <option>Otro</option>
+          </select>
+          <div class="invalid-feedback">Selecciona un departamento válido.</div>
+        </div>
+  
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Código postal</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">Proporciona un código postal válido.</div>
+        </div>
+  
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Acepto los términos y condiciones de los pedidos Delizia.
+            </label>
+            <div class="invalid-feedback">Debes aceptar antes de enviar.</div>
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar Pedido</button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="col-md-6">
+      <div class="card">
+        <img src="imagenes/helado3.png" class="card-img-top" alt="Helado de maracuyá Delizia">
+        <div class="card-body">
+          <h5 class="card-title">Helado Delizia de Maracuyá</h5>
+          <p class="card-text">¡Déjate conquistar por el sabor exótico y refrescante del helado artesanal de maracuyá! Una mezcla perfecta entre lo dulce y lo ácido.</p>
+          <a href="#" class="btn btn-primary">Pedir ahora</a>
+        </div>
+      </div>
+    
+      <div class="card placeholder-card">
+        <img src="imagenes/helado4.png" class="card-img-top" alt="Cargando imagen...">
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+          <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<nav aria-label="Page navigation example" style="text-align: center;">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="index11.html">Previous</a></li>
+
+      <li class="page-item"><a class="page-link" href="indexh33.html">Siguiente</a></li>
+    </ul>
+  </nav>
+<footer>
+    <div class="col-sm-12 text-center">
+        <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 20px;">
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">About Us</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Fonts GitHub</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Icons GitHub</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Fonts Blog</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Material Design</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Google Design</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Privacy</a></li>
+          <li><a href="#" style="font-size: 14px; color: #6c757d; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+      </div>
+</footer>
+</body>
+</html>

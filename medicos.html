@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospital Holandés - Médicos</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    nav {
+      background-color: #003366;
+      padding: 15px 0;
+    }
+    nav .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      padding: 5px 10px;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    main.container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    main h2 {
+      color: #003366;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .doctor-card {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 25px;
+      border-left: 5px solid #003366;
+      background-color: #e9f0f8;
+      padding: 15px;
+      border-radius: 6px;
+      align-items: center;
+    }
+    .doctor-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #003366;
+    }
+    .doctor-info {
+      flex: 1;
+    }
+    .doctor-info h3 {
+      margin-bottom: 6px;
+      color: #002244;
+    }
+    .doctor-info p {
+      font-size: 1rem;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="index11.html">Inicio</a>
+      <a href="citas.html">Citas</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="medicos.html">Médicos</a>
+      <a href="emergencias.html">Urgencias 24/7</a>
+      <a href="informacion.html">Información</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Conoce a Nuestros Médicos</h2>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor1.jpg" alt="Dr. Juan Pérez" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dr. Juan Pérez</h3>
+        <p>Especialista en Cardiología. Más de 15 años de experiencia en el diagnóstico y tratamiento de enfermedades del corazón.</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor2.jpg" alt="Dra. María López" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dra. María López</h3>
+        <p>Pediatra. Dedicada al cuidado y desarrollo saludable de niños y adolescentes, con enfoque en atención personalizada.</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor3.webp" alt="Dr. Carlos Gómez" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dr. Carlos Gómez</h3>
+        <p>Médico General. Proporciona atención integral y tratamiento para enfermedades comunes con un enfoque humanitario.</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor4.png" alt="Dra. Ana Fernández" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dra. Ana Fernández</h3>
+        <p>Especialista en Odontología. Experta en tratamientos dentales completos y prevención para mantener una sonrisa saludable.</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor5.jpg" alt="Dr. Luis Martínez" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dr. Luis Martínez</h3>
+        <p>Especialista en Neurología. Comprometido con la salud cerebral y tratamiento de trastornos neurológicos complejos.</p>
+      </div>
+    </div>
+
+    <div class="doctor-card">
+      <img src="imagenes/doctor6.jpg" alt="Dra. Elena Rojas" class="doctor-photo" />
+      <div class="doctor-info">
+        <h3>Dra. Elena Rojas</h3>
+        <p>Especialista en Ginecología. Brinda atención integral para la salud femenina, incluyendo control prenatal y menopausia.</p>
+      </div>
+    </div>
+
+  </main>
+<nav aria-label="Page navigation example" style="text-align: center; margin-top: 30px;">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="index11.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="citas.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="servicios.html">3</a></li>
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="medicos.html">4</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="emergencias.html">Siguiente</a></li>
+  </ul>
+</nav>
+
+  <footer>
+    &copy; 2025 Hospital Holandés - Todos los derechos reservados
+  </footer>
+</body>
+</html>

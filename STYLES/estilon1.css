@@ -1,0 +1,108 @@
+body{
+    background-color: rgb(21, 25, 27);
+    padding: 0%;
+    width: 100%;
+   
+   
+}
+header{
+    background-color: rgb(4, 14, 14);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    border: 3px solid rgb(40, 23, 56);
+    row-gap: 10px;
+    column-gap: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+header div h1{
+    font-family: cursive;
+    color: wheat;
+    
+    font-size: 40px;
+}
+nav {
+    background-color: #288057;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 25px;
+}
+
+nav a:hover {
+    color: #feb47b;
+}
+
+.tablaa {
+    margin: auto;
+    display: table;
+    width: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff7e5f;
+    color: white;
+}
+#SECCION1{
+    color: white;
+    background-color: #29312d;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    border: 3px solid rgb(40, 23, 56);
+    row-gap: 10px;
+    column-gap: 0px;
+    padding: 20px;
+    text-align: center;
+    
+}
+#SECCION1 >div{
+    box-shadow: 2px 15px 10px whitesmoke;
+}
+#SECCION1 >div> img{
+    border-radius: 25%;
+    width: 250px;
+    height: 250px;
+}
+.pies{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    padding: 0px;
+    row-gap: 10px;
+    column-gap: 0px;
+    color: wheat;
+    
+}
+.pies >div{
+    background-color: rgb(16, 17, 17);
+}
+.pies >div >img{
+    width: 400px;
+    height: 150px;
+}
+#seccion2{
+    color: rgb(245, 247, 248);
+    background-color: rgb(12, 12, 12);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+P{
+    font-family: cursive;
+}
